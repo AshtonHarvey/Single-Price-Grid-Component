@@ -1,5 +1,113 @@
-@use "./variables.scss";
+@use "variables";
 
 body {
-  font-family: sans-serif;
+  background-color: lavender;
+  padding: 2rem;
+}
+
+.price-component {
+  font-family: "Roboto";
+  letter-spacing: 0.05rem;
+  background-color: white;
+  border-radius: 10px;
+  transition: translate 2s ease-out;
+  max-width: 700px;
+  margin: auto;
+  &__section-one {
+    width: 100%;
+    box-sizing: border-box;
+    &__title {
+      color: var(--Cyan);
+      font-weight: bold;
+      font-size: 1.25rem;
+      margin-bottom: 1.75rem;
+    }
+    &__guarantee {
+      color: var(--Bright-Yellow);
+      font-weight: bold;
+      margin-bottom: 1.25rem;
+    }
+    &__description {
+      color: var(--Grayish-Blue);
+      line-height: 1.5rem;
+      font-size: 1rem;
+    }
+  }
+
+  &__section-two {
+    color: var(--Light-Gray);
+    &__left-container {
+      background-color: var(--Cyan);
+      width: 100%;
+      box-sizing: border-box;
+
+      &__title {
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+        font-size: 1.1rem;
+      }
+      &__price-container {
+        display: flex;
+        margin-bottom: 1rem;
+        font-size: 2rem;
+        &__price {
+          margin-right: 0.5rem;
+          font-weight: 600;
+        }
+        &__time {
+          font-size: 1rem;
+          opacity: 60%;
+          align-self: center;
+        }
+      }
+      &__description {
+        opacity: 90%;
+        margin-bottom: 2rem;
+      }
+      &__button {
+        width: 100%;
+        border: none;
+        border-radius: 6px;
+        height: 50px;
+        background-color: var(--Bright-Yellow);
+        color: var(--Light-Gray);
+        font-size: 1.2rem;
+        font-weight: 600;
+      }
+    }
+
+    &__right-container {
+      width: 100%;
+      box-sizing: border-box;
+      background-color: var(--light-Cyan);
+      border-radius: 0 0 10px 10px;
+      &__title {
+        margin-bottom: 1.5rem;
+        font-weight: 600;
+        font-size: 1.2rem;
+      }
+      &__description {
+        opacity: 95%;
+        line-height: 1.4rem;
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
+
+.--padding {
+  padding: 3rem;
+}
+
+@media only screen and (min-width: 700px) {
+  .price-component__section-two__left-container {
+    border-radius: 0 0 0 10px;
+  }
+  .price-component__section-two__right-container {
+    border-radius: 0 0 10px 0;
+  }
+
+  .--flex {
+    display: flex;
+  }
 }
