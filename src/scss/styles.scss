@@ -10,8 +10,8 @@ body {
   letter-spacing: 0.05rem;
   background-color: white;
   border-radius: 10px;
-  transition: translate 2s ease-out;
-  max-width: 700px;
+  transition: max-width 0.25s ease-out;
+  max-width: 400px;
   margin: auto;
   &__section-one {
     width: 100%;
@@ -100,6 +100,9 @@ body {
 }
 
 @media only screen and (min-width: 700px) {
+  .price-component {
+    max-width: 700px;
+  }
   .price-component__section-two__left-container {
     border-radius: 0 0 0 10px;
   }
