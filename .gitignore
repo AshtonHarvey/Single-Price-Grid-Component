@@ -4,6 +4,3 @@
 .cache
 dist
 node_modules
-*.sketch
-*.xd
-*.fig
